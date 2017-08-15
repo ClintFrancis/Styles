@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/layout"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/labelOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30sp"
+        android:paddingBottom="15sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:text="Label One" />
+    <TextView
+        android:id="@+id/labelTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:text="Label Two" />
+    <TextView
+        android:id="@+id/labelThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:text="Label Three" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray" />
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mi urna, semper eu ipsum eu, ornare placerat ex. Fusce consectetur, elit ut sodales hendrerit, elit orci cursus magna, in facilisis tellus ipsum ut lacus. Vivamus pretium pulvinar justo, et scelerisque urna viverra eu. Praesent condimentum eu lorem eget sagittis. Nam turpis orci, aliquam vitae lectus sed, ultricies fermentum elit." />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:id="@+id/editText"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:editable="true" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:id="@+id/space1" />
+    <ImageButton
+        android:src="@drawable/refreshicon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/refreshIcon" />
+</LinearLayout>

@@ -1,0 +1,54 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Styles Shared", "Styles Shared", "{88CCAC45-5A0E-42C2-9092-43EEF4F90D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles.Shared", "..\Shared\Styles.Shared\Styles.Shared.csproj", "{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles.iOS", "..\Shared\Styles.iOS\Styles.iOS.csproj", "{4136A2FB-1B10-4597-8459-19E2723756CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles.Droid", "..\Shared\Styles.Droid\Styles.Droid.csproj", "{28D4D2A6-E4B6-431A-AD7B-398C13EEB84D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles.Color.Shared", "Styles.Color.Shared\Styles.Color.Shared.csproj", "{3CC91C78-C109-4897-9FAC-18BAE06D9254}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles.Color.iOS", "Styles.Color.iOS\Styles.Color.iOS.csproj", "{103D1CF5-C7C2-4B18-B8DA-105100DDF2B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles.Color.Droid", "Styles.Color.Droid\Styles.Color.Droid.csproj", "{C7E7C503-605D-490D-92A7-F86B6654A039}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4136A2FB-1B10-4597-8459-19E2723756CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4136A2FB-1B10-4597-8459-19E2723756CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4136A2FB-1B10-4597-8459-19E2723756CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4136A2FB-1B10-4597-8459-19E2723756CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D4D2A6-E4B6-431A-AD7B-398C13EEB84D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D4D2A6-E4B6-431A-AD7B-398C13EEB84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D4D2A6-E4B6-431A-AD7B-398C13EEB84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D4D2A6-E4B6-431A-AD7B-398C13EEB84D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CC91C78-C109-4897-9FAC-18BAE06D9254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CC91C78-C109-4897-9FAC-18BAE06D9254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CC91C78-C109-4897-9FAC-18BAE06D9254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CC91C78-C109-4897-9FAC-18BAE06D9254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{103D1CF5-C7C2-4B18-B8DA-105100DDF2B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{103D1CF5-C7C2-4B18-B8DA-105100DDF2B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{103D1CF5-C7C2-4B18-B8DA-105100DDF2B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{103D1CF5-C7C2-4B18-B8DA-105100DDF2B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E7C503-605D-490D-92A7-F86B6654A039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E7C503-605D-490D-92A7-F86B6654A039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E7C503-605D-490D-92A7-F86B6654A039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E7C503-605D-490D-92A7-F86B6654A039}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F7DE4405-3FCD-497D-B1B1-BC8351C5804B} = {88CCAC45-5A0E-42C2-9092-43EEF4F90D2C}
+		{4136A2FB-1B10-4597-8459-19E2723756CB} = {88CCAC45-5A0E-42C2-9092-43EEF4F90D2C}
+		{28D4D2A6-E4B6-431A-AD7B-398C13EEB84D} = {88CCAC45-5A0E-42C2-9092-43EEF4F90D2C}
+	EndGlobalSection
+EndGlobal

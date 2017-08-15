@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\StylesText\src\packages\NuGet.Build.Packaging.0.1.193\build\NuGet.Build.Packaging.props" Condition="Exists('..\..\..\StylesText\src\packages\NuGet.Build.Packaging.0.1.193\build\NuGet.Build.Packaging.props')" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Styles</RootNamespace>
+    <AssemblyName>Styles.Shared</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Bitmaps\Bitmap.cs" />
+    <Compile Include="Bitmaps\BitmapUtils.cs" />
+    <Compile Include="CSS\CssAttribute.cs" />
+    <Compile Include="CSS\CssEnums.cs" />
+    <Compile Include="CSS\CssParameters.cs" />
+    <Compile Include="CSS\CssParser.cs" />
+    <Compile Include="CSS\CssTag.cs" />
+    <Compile Include="CSS\CustomParser.cs" />
+    <Compile Include="CSS\Utils\ParserUtils.cs" />
+    <Compile Include="Colors\ColorHSB.cs" />
+    <Compile Include="Colors\ColorHSL.cs" />
+    <Compile Include="Colors\ColorLAB.cs" />
+    <Compile Include="Colors\ColorRGB.cs" />
+    <Compile Include="Colors\ColorSpace.cs" />
+    <Compile Include="Colors\ColorXYZ.cs" />
+    <Compile Include="Colors\Comparisons\CieDe2000Comparison.cs" />
+    <Compile Include="Colors\Conversions\ConvertHSB.cs" />
+    <Compile Include="Colors\Conversions\ConvertHSL.cs" />
+    <Compile Include="Colors\Conversions\ConvertLAB.cs" />
+    <Compile Include="Colors\Conversions\ConvertRGB.cs" />
+    <Compile Include="Colors\Conversions\ConvertXYZ.cs" />
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\EnumUtils.cs" />
+    <Compile Include="Common\MathUtils.cs" />
+    <Compile Include="Common\Range.cs" />
+    <Compile Include="Resources\ResourceLoader.cs" />
+    <Compile Include="Colors\Extensions\ColorAdjustExt.cs" />
+    <Compile Include="Colors\Extensions\ColorCompareExt.cs" />
+    <Compile Include="Colors\Extensions\ColorValueExt.cs" />
+    <Compile Include="Colors\Conversions\ConvertArrays.cs" />
+    <Compile Include="Colors\ColorUtils.cs" />
+    <Compile Include="Colors\RGBA.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Colors\Extensions\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.targets')" />
+  <Import Project="..\..\..\StylesText\src\packages\NuGet.Build.Packaging.0.1.193\build\NuGet.Build.Packaging.targets" Condition="Exists('..\..\..\StylesText\src\packages\NuGet.Build.Packaging.0.1.193\build\NuGet.Build.Packaging.targets')" />
+</Project>

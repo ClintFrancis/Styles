@@ -1,0 +1,38 @@
+﻿/* Swatches */
+swatches{
+	--default-text-color: #464646;
+}
+
+
+/* Text Styles */
+h1{
+	font-family    		: "Archistico-Normal";
+	font-size        	: 38px;
+	text-overflow		: "ellipsis";
+	text-align			: "center";
+	lines				: 0;
+	color				: #000000;
+	line-height			: 36px;
+	letter-spacing		: 0;
+}
+
+h2{
+	font-family    		: "Avenir-Medium";
+	font-size        	: 16;
+	text-overflow		: "ellipsis";
+	text-align			: "center";
+	text-transform		: "uppercase";
+	color            	: var(--default-text-color);
+}
+
+body{
+	font-family      	: "Avenir-Book";
+	font-size        	: 14;
+	text-align			: "center";
+	color            	: var(--default-text-color);
+}
+
+i{
+	font-family    		: "Avenir-Heavy";
+	font-style			: "italic";
+}
