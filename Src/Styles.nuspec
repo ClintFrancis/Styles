@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Styles.Shared</id>
+    <version>1.1.3</version>
+    <authors>Clinton Francis</authors>
+    <owners>Clinton Francis</owners>
+    <licenseUrl>https://github.com/ClintFrancis/Styles/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/ClintFrancis/Styles</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <title>Styles Base Library</title>
+    <description>Common classes to the Styles libraries (Styles.Text and Styles.Color)</description>
+    <releaseNotes>First Nuget release</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>css xamarin text label html mobile color gradient rgb cymk hsl hsv</tags>
+    <dependencies>
+      
+    </dependencies>
+  </metadata>
+  <files>
+      <!--Core-->
+	    <file src="Shared/Styles.Shared/bin/Release/Styles.Shared.dll" target="lib/portable-net45+wp80+win8+wpa81/Styles.Shared.dll" />
+
+      <!--Xamarin.iOSUnified-->
+      <file src="Shared/Styles.iOS/bin/Release/Styles.dll" target="lib/Xamarin.iOS10/Styles.dll" />
+      <file src="Shared/Styles.iOS/bin/Release/Styles.Shared.dll" target="lib/Xamarin.iOS10/Styles.Shared.dll" />
+
+	  <!-- Xamarin.Android -->
+      <file src="Shared/Styles.Droid/bin/Release/Styles.dll" target="lib/MonoAndroid10/Styles.dll" />
+      <file src="Shared/Styles.Droid/bin/Release/Styles.Shared.dll" target="lib/MonoAndroid10/Styles.Shared.dll" />
+   </files>
+</package>

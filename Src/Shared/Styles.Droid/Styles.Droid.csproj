@@ -6,8 +6,8 @@
     <ProjectGuid>{28D4D2A6-E4B6-431A-AD7B-398C13EEB84D}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Styles.Droid</RootNamespace>
-    <AssemblyName>Styles.Droid</AssemblyName>
+    <RootNamespace>Styles</RootNamespace>
+    <AssemblyName>Styles</AssemblyName>
     <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>

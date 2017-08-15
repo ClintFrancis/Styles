@@ -18,3 +18,4 @@ Src/Shared/Styles.iOS/bin
 Samples/ColorStyle/ColorStyleDemo.iOS/bin
 Samples/ColorStyle/ColorStyleDemo.iOS/obj
 Samples/TextStyle/TextStyleDemo.Native.Droid/bin
+*.userprefs
