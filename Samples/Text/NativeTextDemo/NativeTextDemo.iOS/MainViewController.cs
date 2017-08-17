@@ -5,11 +5,14 @@ using System.Collections.Generic;
 using GalaSoft.MvvmLight.Helpers;
 using NativeTextDemo.ViewModel;
 using UIKit;
+using Styles.Text;
 
 namespace NativeTextDemo.iOS
 {
     public partial class MainViewController : UIViewController
     {
+        StyleManager styleManager;
+
         // Keep track of bindings to avoid premature garbage collection
         readonly List<Binding> bindings = new List<Binding>();
         MainViewModel Vm
@@ -47,6 +50,13 @@ namespace NativeTextDemo.iOS
                 this.SetBinding(
                   () => Vm.Body,
                   () => textBody.Text));
+
+            styleManager = new StyleManager();
+            var styleOne = styleManager.Add(titleOne, TextStyles.H1);
+
+            styleManager.Add(titleTwo, TextStyles.H2);
+            styleManager.Add(titleThree, TextStyles.H1);
+            styleManager.Add(textBody, TextStyles.Body);
         }
     }
 }

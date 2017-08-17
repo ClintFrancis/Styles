@@ -1,4 +1,6 @@
 ﻿using Foundation;
+using GalaSoft.MvvmLight.Ioc;
+using Styles.Text;
 using UIKit;
 
 namespace NativeTextDemo.iOS
@@ -18,9 +20,8 @@ namespace NativeTextDemo.iOS
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            // Override point for customization after application launch.
-            // If not required for your application you can safely delete this method
-
+            // TEMP while not using a nuget
+            SimpleIoc.Default.Register<ITextStyle>(() => new TextStyle());
             AppBootstrapper.Init();
 
             return true;

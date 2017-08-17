@@ -32,7 +32,7 @@ namespace NativeTextDemo.ViewModel
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             SimpleIoc.Default.Register<MainViewModel>();
-            SimpleIoc.Default.Register<StylesViewModel>();
+            SimpleIoc.Default.Register<StylesViewModel>(true);
         }
 
         public MainViewModel Main

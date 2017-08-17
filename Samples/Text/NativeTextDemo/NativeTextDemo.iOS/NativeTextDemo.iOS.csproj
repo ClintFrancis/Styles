@@ -124,6 +124,28 @@
       <Project>{46AF872C-3E73-4385-AE54-3C00E97E85B7}</Project>
       <Name>NativeTextDemo</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Src\Shared\Styles.iOS\Styles.iOS.csproj">
+      <Project>{4136A2FB-1B10-4597-8459-19E2723756CB}</Project>
+      <Name>Styles.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Src\Shared\Styles.Shared\Styles.Shared.csproj">
+      <Project>{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}</Project>
+      <Name>Styles.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Src\Text\Styles.Text.iOS\Styles.Text.iOS.csproj">
+      <Project>{90FC3884-EEC9-42A2-B2D2-260A9A4911D1}</Project>
+      <Name>Styles.Text.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Src\Text\Styles.Text.Shared\Styles.Text.Shared.csproj">
+      <Project>{77361526-701C-4DDD-A119-B277E204C87A}</Project>
+      <Name>Styles.Text.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Archistico_Simple.ttf" />
+    <BundleResource Include="Resources\BreeSerif-Regular.ttf" />
+    <BundleResource Include="Resources\OpenSans-CondBold.ttf" />
+    <BundleResource Include="Resources\OpenSans-CondLight.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

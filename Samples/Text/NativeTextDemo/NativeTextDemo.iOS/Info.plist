@@ -36,5 +36,12 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Archistico_Simple.ttf</string>
+		<string>BreeSerif-Regular.ttf</string>
+		<string>OpenSans-CondBold.ttf</string>
+		<string>OpenSans-CondLight.ttf</string>
+	</array>
 </dict>
 </plist>

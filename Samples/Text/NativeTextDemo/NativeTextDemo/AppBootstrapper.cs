@@ -11,7 +11,7 @@ namespace NativeTextDemo
             Assets.AssemblyType = typeof(AppBootstrapper);
 
             // Register the TextStyle
-            SimpleIoc.Default.Register<TextStyle>(() => new TextStyle());
+            //SimpleIoc.Default.Register<ITextStyle>(() => new TextStyle());
         }
     }
 }
