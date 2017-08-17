@@ -4,14 +4,18 @@ using System;
 using System.Collections.Generic;
 using GalaSoft.MvvmLight.Helpers;
 using NativeTextDemo.ViewModel;
-using UIKit;
 using Styles.Text;
+using UIKit;
 
 namespace NativeTextDemo.iOS
 {
     public partial class MainViewController : UIViewController
     {
         StyleManager styleManager;
+        IManagedStyle styleOne;
+        IManagedStyle styleTwo;
+        IManagedStyle styleThree;
+        IManagedStyle styleBody;
 
         // Keep track of bindings to avoid premature garbage collection
         readonly List<Binding> bindings = new List<Binding>();
@@ -31,32 +35,33 @@ namespace NativeTextDemo.iOS
         {
             base.ViewDidLoad();
 
+            styleManager = new StyleManager();
+            styleOne = styleManager.Add(titleOne, TextStyles.H1);
+            styleTwo = styleManager.Add(titleTwo, TextStyles.H2);
+            styleThree = styleManager.Add(titleThree, TextStyles.H1);
+            styleBody = styleManager.Add(textBody, TextStyles.Body);
+
             bindings.Add(
                 this.SetBinding(
                   () => Vm.TitleOne,
-                  () => titleOne.Text));
+                  () => styleOne.Text));
 
             bindings.Add(
                 this.SetBinding(
                   () => Vm.TitleTwo,
-                  () => titleTwo.Text));
+                  () => styleTwo.Text));
 
             bindings.Add(
                 this.SetBinding(
                   () => Vm.TitleThree,
-                    () => titleThree.Text));
+                    () => styleThree.Text));
 
             bindings.Add(
                 this.SetBinding(
                   () => Vm.Body,
-                  () => textBody.Text));
+                  () => styleBody.Text));
 
-            styleManager = new StyleManager();
-            var styleOne = styleManager.Add(titleOne, TextStyles.H1);
 
-            styleManager.Add(titleTwo, TextStyles.H2);
-            styleManager.Add(titleThree, TextStyles.H1);
-            styleManager.Add(textBody, TextStyles.Body);
         }
     }
 }
