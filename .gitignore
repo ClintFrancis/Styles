@@ -19,3 +19,10 @@ Samples/ColorStyle/ColorStyleDemo.iOS/bin
 Samples/ColorStyle/ColorStyleDemo.iOS/obj
 Samples/TextStyle/TextStyleDemo.Native.Droid/bin
 *.userprefs
+Samples/Text/NativeTextDemo/Droid/bin
+Samples/Text/NativeTextDemo/Droid/obj
+Samples/Text/NativeTextDemo/iOS/obj
+Samples/Text/NativeTextDemo/NativeTextDemo.iOS/bin
+Samples/Text/NativeTextDemo/NativeTextDemo.iOS/obj
+Samples/Text/NativeTextDemo/NativeTextDemo/bin
+Samples/Text/NativeTextDemo/NativeTextDemo/obj
