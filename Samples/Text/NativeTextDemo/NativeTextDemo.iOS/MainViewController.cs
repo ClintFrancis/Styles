@@ -36,32 +36,56 @@ namespace NativeTextDemo.iOS
             base.ViewDidLoad();
 
             styleManager = new StyleManager();
-            styleOne = styleManager.Add(titleOne, TextStyles.H1);
-            styleTwo = styleManager.Add(titleTwo, TextStyles.H2);
-            styleThree = styleManager.Add(titleThree, TextStyles.H1);
+            styleOne = styleManager.Add(titleOne, TextStyles.H2);
+            styleTwo = styleManager.Add(titleTwo, TextStyles.H1);
+            styleThree = styleManager.Add(titleThree, TextStyles.H2);
             styleBody = styleManager.Add(textBody, TextStyles.Body);
 
             bindings.Add(
                 this.SetBinding(
-                  () => Vm.TitleOne,
-                  () => styleOne.Text));
+                    () => Application.Locator.Styles.CustomTags,
+                    () => styleManager.CustomTags
+                )
+            );
 
             bindings.Add(
                 this.SetBinding(
-                  () => Vm.TitleTwo,
-                  () => styleTwo.Text));
+                    () => Vm.TitleOne,
+                    () => styleOne.Text
+                )
+            );
 
             bindings.Add(
                 this.SetBinding(
-                  () => Vm.TitleThree,
-                    () => styleThree.Text));
+                    () => Vm.TitleTwo,
+                    () => styleTwo.Text
+                )
+            );
 
             bindings.Add(
                 this.SetBinding(
-                  () => Vm.Body,
-                  () => styleBody.Text));
+                    () => Vm.TitleThree,
+                    () => styleThree.Text
+                )
+            );
 
+            bindings.Add(
+                this.SetBinding(
+                    () => Vm.Body,
+                    () => styleBody.Text
+                )
+            );
 
+            var touchGesture = new UITapGestureRecognizer(HandleAction);
+            View.AddGestureRecognizer(touchGesture);
+        }
+
+        void HandleAction()
+        {
+            if (Vm != null)
+            {
+                Vm.RefreshCommand.Execute(null);
+            }
         }
     }
 }

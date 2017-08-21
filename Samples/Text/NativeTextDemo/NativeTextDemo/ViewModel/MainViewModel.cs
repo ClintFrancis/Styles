@@ -1,4 +1,5 @@
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 
 namespace NativeTextDemo.ViewModel
 {
@@ -28,13 +29,10 @@ namespace NativeTextDemo.ViewModel
             private set
             {
                 if (_titleOne == value)
-                {
                     return;
-                }
 
                 _titleOne = value;
-                // Update bindings, no broadcast
-                RaisePropertyChanged(_titleOne);
+                RaisePropertyChanged("TitleOne");
             }
         }
 
@@ -50,13 +48,10 @@ namespace NativeTextDemo.ViewModel
             private set
             {
                 if (_titleTwo == value)
-                {
                     return;
-                }
 
                 _titleTwo = value;
-                // Update bindings, no broadcast
-                RaisePropertyChanged(_titleTwo);
+                RaisePropertyChanged("TitleTwo");
             }
         }
 
@@ -72,13 +67,10 @@ namespace NativeTextDemo.ViewModel
             private set
             {
                 if (_titleThree == value)
-                {
                     return;
-                }
 
                 _titleThree = value;
-                // Update bindings, no broadcast
-                RaisePropertyChanged(_titleThree);
+                RaisePropertyChanged("TitleThree");
             }
         }
 
@@ -94,13 +86,25 @@ namespace NativeTextDemo.ViewModel
             private set
             {
                 if (_body == value)
-                {
                     return;
-                }
 
                 _body = value;
-                // Update bindings, no broadcast
-                RaisePropertyChanged(_body);
+                RaisePropertyChanged("Body");
+            }
+        }
+
+        private RelayCommand _refreshCommand;
+
+        public RelayCommand RefreshCommand
+        {
+            get
+            {
+                return _refreshCommand
+                  ?? (_refreshCommand = new RelayCommand(
+                    () =>
+                    {
+                        //this.TitleOne = "Test Rules!";
+                    }));
             }
         }
 
@@ -109,10 +113,10 @@ namespace NativeTextDemo.ViewModel
         /// </summary>
         public MainViewModel()
         {
-            _titleOne = "Hello World";
-            _titleTwo = "This is a heading";
-            _titleThree = "about a heading...";
-            _body = "Lorum Ipsum Facto";
+            _titleOne = @"The difference between";
+            _titleTwo = @"Ordinary & Extraordinary";
+            _titleThree = @"Is that little <spot>extra</spot>";
+            _body = @"Geometry can produce legible letters but <i>art alone</i> makes them beautiful.<br/><br/>Art begins where geometry ends and imparts to letters a character trascending mere measurement.";
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
+using Styles;
 using Styles.Text;
 
 namespace NativeTextDemo
@@ -9,6 +11,28 @@ namespace NativeTextDemo
     {
         public string CSS1 { get; private set; }
         public string CSS2 { get; private set; }
+        ITextStyle textStyle;
+
+
+        private List<CssTag> _customTags;
+
+        public List<CssTag> CustomTags
+        {
+            get
+            {
+                return _customTags;
+            }
+
+            private set
+            {
+                if (_customTags == value)
+                    return;
+
+                _customTags = value;
+                RaisePropertyChanged("CustomTags");
+            }
+        }
+
 
         public StylesViewModel()
         {
@@ -17,10 +41,14 @@ namespace NativeTextDemo
 
         public void Init()
         {
-            var textStyle = SimpleIoc.Default.GetInstance<ITextStyle>();
+            textStyle = SimpleIoc.Default.GetInstance<ITextStyle>();
             //CSS1 = Assets.LoadString("NativeTextDemo.Resources.StyleTwo.css");
             //CSS2 = Assets.LoadString("NativeTextDemo.Resources.StyleOne.css");
             //textStyle.SetCSS(CSS1);
+
+            CustomTags = new List<CssTag> {
+                new CssTag ("spot"){ CSS = "spot{color:" + ColorSwatches.SpotColor.ToHex () + "}" }
+            };
         }
     }
 }
