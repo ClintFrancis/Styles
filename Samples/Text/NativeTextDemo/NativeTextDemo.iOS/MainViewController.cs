@@ -39,6 +39,7 @@ namespace NativeTextDemo.iOS
             styleOne = styleManager.Add(titleOne, TextStyles.H2);
             styleTwo = styleManager.Add(titleTwo, TextStyles.H1);
             styleThree = styleManager.Add(titleThree, TextStyles.H2);
+            styleThree.AutoUpdate = true;
             styleBody = styleManager.Add(textBody, TextStyles.Body);
 
             bindings.Add(
@@ -84,7 +85,7 @@ namespace NativeTextDemo.iOS
         {
             if (Vm != null)
             {
-                Vm.RefreshCommand.Execute(null);
+                Application.Locator.Styles.RefreshCommand.Execute(null);
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Ioc;
 using Styles;
 using Styles.Text;
@@ -30,6 +31,24 @@ namespace NativeTextDemo
 
                 _customTags = value;
                 RaisePropertyChanged("CustomTags");
+            }
+        }
+
+        private RelayCommand _refreshCommand;
+
+        public RelayCommand RefreshCommand
+        {
+            get
+            {
+                return _refreshCommand
+                  ?? (_refreshCommand = new RelayCommand(
+                    () =>
+                    {
+                        var randomColor = ColorSwatches.RandomColor.ToHex();
+                        CustomTags = new List<CssTag> {
+                            new CssTag ("spot"){ CSS = "spot{color:" + randomColor + "}" }
+                        };
+                    }));
             }
         }
 
