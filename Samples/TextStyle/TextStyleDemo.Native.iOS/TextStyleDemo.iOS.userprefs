@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{ED18D472-84FA-4C32-88BF-B14F8FEB8177}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Src/Text/Styles.Text.iOS/ViewStyles/ManagedStyleBase.cs">
     <Files>
-      <File FileName="ViewController.cs" Line="17" Column="6" />
-      <File FileName="Resources/StyleOne.css" Line="12" Column="26" />
-      <File FileName="ManualViewController.cs" Line="29" Column="45" />
+      <File FileName="ViewController.cs" Line="43" Column="38" />
+      <File FileName="../../../Src/Text/Styles.Text.Shared/StyleManagerBase.cs" Line="35" Column="73" />
+      <File FileName="../../../Src/Text/Styles.Text.iOS/StyleManager.cs" Line="7" Column="44" />
+      <File FileName="../../../Src/Text/Styles.Text.iOS/ViewStyles/ManagedStyleBase.cs" Line="45" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhoneSimulator" />
-  <MonoDevelop.Ide.ItemProperties.TextStyleDemo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2D576A83-8BD9-4BCD-9079-1E687EFD4F9E" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.TextStyleDemo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.C665409D-EC69-47C2-A36B-D6A14045B2D0" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/clintonfrancis/Development/Personal/StylesText/samples/TextStyleDemo.Native.iOS/DemoStyleManager.cs" relfile="DemoStyleManager.cs" line="17" column="1" />
-      <Breakpoint file="/Users/clintonfrancis/Development/Personal/StylesText/samples/TextStyleDemo.Native.iOS/DemoStyleManager.cs" relfile="DemoStyleManager.cs" line="34" column="1" />
+      <Breakpoint file="/Users/clintonfrancis/Development/Personal/Styles/Samples/TextStyle/TextStyleDemo.Native.iOS/DemoStyleManager.cs" relfile="DemoStyleManager.cs" line="17" column="1" />
+      <Breakpoint file="/Users/clintonfrancis/Development/Personal/Styles/Samples/TextStyle/TextStyleDemo.Native.iOS/DemoStyleManager.cs" relfile="DemoStyleManager.cs" line="34" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

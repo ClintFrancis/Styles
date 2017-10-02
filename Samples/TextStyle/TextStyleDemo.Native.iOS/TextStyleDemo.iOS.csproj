@@ -130,20 +130,20 @@
     <BundleResource Include="Resources\OpenSans-CondLight.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Styles.Text.iOS\Styles.Text.iOS.csproj">
-      <Project>{56F11B6E-732D-41D4-B643-9CE1512253C4}</Project>
-      <Name>Styles.Text.iOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\StylesCore\src\Styles.iOS\Styles.iOS.csproj">
+    <ProjectReference Include="..\..\..\Src\Shared\Styles.iOS\Styles.iOS.csproj">
       <Project>{4136A2FB-1B10-4597-8459-19E2723756CB}</Project>
       <Name>Styles.iOS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\StylesCore\src\Styles.Shared\Styles.Shared.csproj">
+    <ProjectReference Include="..\..\..\Src\Shared\Styles.Shared\Styles.Shared.csproj">
       <Project>{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}</Project>
       <Name>Styles.Shared</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Styles.Text.Shared\Styles.Text.Shared.csproj">
-      <Project>{50AE51CA-5F98-4643-BB5C-3910912F4C0C}</Project>
+    <ProjectReference Include="..\..\..\Src\Text\Styles.Text.iOS\Styles.Text.iOS.csproj">
+      <Project>{90FC3884-EEC9-42A2-B2D2-260A9A4911D1}</Project>
+      <Name>Styles.Text.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Src\Text\Styles.Text.Shared\Styles.Text.Shared.csproj">
+      <Project>{77361526-701C-4DDD-A119-B277E204C87A}</Project>
       <Name>Styles.Text.Shared</Name>
     </ProjectReference>
   </ItemGroup>
