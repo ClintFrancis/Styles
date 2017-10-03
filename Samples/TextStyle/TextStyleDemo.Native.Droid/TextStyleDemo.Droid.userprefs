@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{3F200488-E8CC-4D07-AE6E-7CB1F57171C4}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="MainActivity.cs">
     <Files>
-      <File FileName="MainActivity.cs" Line="80" Column="70" />
+      <File FileName="MainActivity.cs" Line="73" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.TextStyleDemo.Droid PreferredExecutionTarget="Android.Nexus_5X_Edited_API_25" />

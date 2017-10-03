@@ -62,8 +62,8 @@ namespace TextStyleDemo.Droid
 
             // Create a StyleManager to handle any CSS changes automatically
             _styleManager = new StyleManager(TextStyle.Default);
-            //_styleManager.Add(labelOne, "h2", headingOne);
-            //_styleManager.Add(labelTwo, "h1", headingTwo);
+            _styleManager.Add(labelOne, "h2", headingOne);
+            _styleManager.Add(labelTwo, "h1", headingTwo);
             _styleManager.Add(labelThree, "h2", headingThree, new List<CssTag> {
                 new CssTag ("spot"){ CSS = "spot{color:" + Colors.SpotColor.ToHex() + "}" }
             });

@@ -26,3 +26,7 @@ Samples/Text/NativeTextDemo/NativeTextDemo.iOS/bin
 Samples/Text/NativeTextDemo/NativeTextDemo.iOS/obj
 Samples/Text/NativeTextDemo/NativeTextDemo/bin
 Samples/Text/NativeTextDemo/NativeTextDemo/obj
+Src/Text/Styles.Text.Droid/obj
+Src/Text/Styles.Text.Shared/bin
+Src/Text/Styles.Text.Shared/obj
+Src/Text/Styles.Text.Droid/bin
