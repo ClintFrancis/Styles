@@ -57,9 +57,9 @@
     <Compile Include="TextStyle.cs" />
     <Compile Include="TextUtils.cs" />
     <Compile Include="UITextExtensions.cs" />
-    <Compile Include="ViewStyles\LabelStyle.cs" />
-    <Compile Include="ViewStyles\TextViewStyle.cs" />
-    <Compile Include="ViewStyles\TextFieldStyle.cs" />
+    <Compile Include="ViewStyles\ManagedLabelStyle.cs" />
+    <Compile Include="ViewStyles\ManagedTextViewStyle.cs" />
+    <Compile Include="ViewStyles\ManagedTextFieldStyle.cs" />
     <Compile Include="ViewStyles\ManagedStyleBase.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -24,7 +24,7 @@ namespace Styles.Text
             IManagedStyle style;
             if (type == TextStyle.typeLabel)
             {
-                style = new LabelStyle(_instance, target as UILabel, styleID, text, true)
+                style = new ManagedLabelStyle(_instance, target as UILabel, styleID, text, true)
                 {
                     CustomTags = tags,
                     EnableHtmlEditing = enableHtmlEditing
@@ -33,7 +33,7 @@ namespace Styles.Text
 
             else if (type == TextStyle.typeTextView)
             {
-                style = new TextViewStyle(_instance, target as UITextView, styleID, text, true)
+                style = new ManagedTextViewStyle(_instance, target as UITextView, styleID, text, true)
                 {
                     CustomTags = tags,
                     EnableHtmlEditing = enableHtmlEditing
@@ -42,7 +42,7 @@ namespace Styles.Text
 
             else
             {
-                style = new TextFieldStyle(_instance, target as UITextField, styleID, text, true)
+                style = new ManagedTextFieldStyle(_instance, target as UITextField, styleID, text, true)
                 {
                     CustomTags = tags,
                     EnableHtmlEditing = enableHtmlEditing

@@ -1,10 +1,8 @@
 ﻿<Properties StartupConfiguration="{ED18D472-84FA-4C32-88BF-B14F8FEB8177}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="../../../Src/Text/Styles.Text.iOS/StyleManager.cs">
     <Files>
-      <File FileName="../../../Src/Text/Styles.Text.iOS/StyleManager.cs" Line="28" Column="18" />
-      <File FileName="../../../Src/Text/Styles.Text.iOS/ViewStyles/ManagedStyleBase.cs" Line="16" Column="10" />
-      <File FileName="../../../Src/Text/Styles.Text.iOS/TextStyle.cs" Line="60" Column="10" />
-      <File FileName="../../../Src/Text/Styles.Text.iOS/ViewStyles/LabelStyle.cs" Line="23" Column="42" />
+      <File FileName="../../../Src/Text/Styles.Text.iOS/ViewStyles/ManagedTextViewStyle.cs" Line="17" Column="31" />
+      <File FileName="../../../Src/Text/Styles.Text.iOS/StyleManager.cs" Line="27" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

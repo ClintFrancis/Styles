@@ -4,11 +4,11 @@ using UIKit;
 namespace Styles.Text
 {
     [Foundation.Preserve(AllMembers = true)]
-    public class LabelStyle : ManagedStyleBase
+    public class ManagedLabelStyle : ManagedStyleBase
     {
         public UILabel Target { get; private set; }
 
-        public LabelStyle(ITextStyle instance, UILabel target, string styleID, string text, bool updateConstraints)
+        public ManagedLabelStyle(ITextStyle instance, UILabel target, string styleID, string text, bool updateConstraints)
         {
             styleInstance = instance as TextStyle;
             _updateConstraints = updateConstraints;

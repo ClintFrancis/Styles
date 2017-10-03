@@ -1,43 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using Foundation;
 using UIKit;
 
 namespace Styles.Text
 {
     [Foundation.Preserve(AllMembers = true)]
-    public class TextFieldStyle : ManagedStyleBase
+    public class ManagedTextViewStyle : ManagedStyleBase
     {
-        public UITextField Target { get; set; }
+        public UITextView Target { get; set; }
 
-        bool _enableHtmlEditing;
-        public override bool EnableHtmlEditing
-        {
-            get { return _enableHtmlEditing; }
-            set
-            {
-                _enableHtmlEditing = value;
-
-                if (Target != null)
-                {
-                    if (value)
-                    {
-                        Target.EditingChanged += TextEditingChanged;
-                        Target.EditingDidBegin += TextEditingStarted;
-                        Target.EditingDidEnd += TextEditingEnded;
-
-                    }
-                    else
-                    {
-                        Target.EditingChanged -= TextEditingChanged;
-                        Target.EditingDidBegin -= TextEditingStarted;
-                        Target.EditingDidEnd -= TextEditingEnded;
-                    }
-                }
-            }
-        }
-
-        public TextFieldStyle(ITextStyle instance, UITextField target, string styleID, string text, bool updateConstraints)
+        public ManagedTextViewStyle(ITextStyle instance, UITextView target, string styleID, string text, bool updateConstraints)
         {
             styleInstance = instance as TextStyle;
             _updateConstraints = updateConstraints;
@@ -94,16 +65,6 @@ namespace Styles.Text
         void TextEditingChanged(object sender, EventArgs e)
         {
             _rawText = Text = Target.Text;
-        }
-
-        void TextEditingStarted(object sender, EventArgs e)
-        {
-            styleInstance.StyleUITextField(Target, StyleID, _rawText, ignoreHtml: true);
-        }
-
-        void TextEditingEnded(object sender, EventArgs e)
-        {
-            styleInstance.StyleUITextField(Target, StyleID, _rawText, CustomTags);
         }
     }
 }
