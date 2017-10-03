@@ -26,6 +26,8 @@ namespace TextStyleDemo.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Styles.Resource.String.library_name = global::TextStyleDemo.Droid.Resource.String.library_name;
+			global::Styles.Text.Droid.Resource.String.library_name = global::TextStyleDemo.Droid.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -132,11 +134,14 @@ namespace TextStyleDemo.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f050002
+			public const int app_name = 2131034114;
+			
 			// aapt resource value: 0x7f050001
-			public const int app_name = 2131034113;
+			public const int hello = 2131034113;
 			
 			// aapt resource value: 0x7f050000
-			public const int hello = 2131034112;
+			public const int library_name = 2131034112;
 			
 			static String()
 			{

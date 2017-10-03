@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>TextStyleDemo.Droid</RootNamespace>
     <AssemblyName>TextStyleDemo.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -83,17 +83,21 @@
     <AndroidAsset Include="Assets\StyleTwo.css" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Styles.Text.Android\Styles.Text.Android.csproj">
-      <Project>{141E15BC-6A3A-4A7D-B33C-67C84EA1BE7F}</Project>
-      <Name>Styles.Text.Android</Name>
+    <ProjectReference Include="..\..\..\Src\Shared\Styles.Droid\Styles.Droid.csproj">
+      <Project>{28D4D2A6-E4B6-431A-AD7B-398C13EEB84D}</Project>
+      <Name>Styles.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Styles.Text.Shared\Styles.Text.Shared.csproj">
-      <Project>{50AE51CA-5F98-4643-BB5C-3910912F4C0C}</Project>
-      <Name>Styles.Text.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\StylesCore\src\Styles.Shared\Styles.Shared.csproj">
+    <ProjectReference Include="..\..\..\Src\Shared\Styles.Shared\Styles.Shared.csproj">
       <Project>{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}</Project>
       <Name>Styles.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Src\Text\Styles.Text.Droid\Styles.Text.Droid.csproj">
+      <Project>{4262F506-D03B-40C6-9F3E-1E862E545348}</Project>
+      <Name>Styles.Text.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Src\Text\Styles.Text.Shared\Styles.Text.Shared.csproj">
+      <Project>{77361526-701C-4DDD-A119-B277E204C87A}</Project>
+      <Name>Styles.Text.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

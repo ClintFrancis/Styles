@@ -36,18 +36,18 @@ namespace TextStyleDemo.Droid
             this.Window.SetSoftInputMode(Android.Views.SoftInput.AdjustPan);
 
             // Register Fonts
-            TextStyle.Main.AddFont("Archistico-Normal", "Archistico_Simple.ttf");
-            TextStyle.Main.AddFont("Avenir-Medium", "Avenir-Medium.ttf");
-            TextStyle.Main.AddFont("Avenir-Book", "Avenir-Book.ttf");
-            TextStyle.Main.AddFont("Avenir-Heavy", "Avenir-Heavy.ttf");
-            TextStyle.Main.AddFont("BreeSerif-Regular", "BreeSerif-Regular.ttf");
-            TextStyle.Main.AddFont("OpenSans-CondBold", "OpenSans-CondBold.ttf");
-            TextStyle.Main.AddFont("OpenSans-CondLight", "OpenSans-CondLight.ttf");
+            TextStyle.Default.AddFont("Archistico-Normal", "Archistico_Simple.ttf");
+            TextStyle.Default.AddFont("Avenir-Medium", "Avenir-Medium.ttf");
+            TextStyle.Default.AddFont("Avenir-Book", "Avenir-Book.ttf");
+            TextStyle.Default.AddFont("Avenir-Heavy", "Avenir-Heavy.ttf");
+            TextStyle.Default.AddFont("BreeSerif-Regular", "BreeSerif-Regular.ttf");
+            TextStyle.Default.AddFont("OpenSans-CondBold", "OpenSans-CondBold.ttf");
+            TextStyle.Default.AddFont("OpenSans-CondLight", "OpenSans-CondLight.ttf");
 
             // Pre-parse the style sheets
             _parsedStylesOne = CssTextStyleParser.Parse(OpenCSSFile("StyleOne.css"));
             _parsedStylesTwo = CssTextStyleParser.Parse(OpenCSSFile("StyleTwo.css"));
-            TextStyle.Main.SetStyles(_parsedStylesOne);
+            TextStyle.Default.SetStyles(_parsedStylesOne);
 
             // Get references to our UI Elements
             var labelOne = FindViewById<TextView>(Resource.Id.labelOne);
@@ -60,12 +60,10 @@ namespace TextStyleDemo.Droid
                 editText.SetCursorVisible(true);
             };
 
-            var testSpot = Colors.SpotColor.ToHex();
-
             // Create a StyleManager to handle any CSS changes automatically
-            _styleManager = new StyleManager(TextStyle.Main);
-            _styleManager.Add(labelOne, "h2", headingOne);
-            _styleManager.Add(labelTwo, "h1", headingTwo);
+            _styleManager = new StyleManager(TextStyle.Default);
+            //_styleManager.Add(labelOne, "h2", headingOne);
+            //_styleManager.Add(labelTwo, "h1", headingTwo);
             _styleManager.Add(labelThree, "h2", headingThree, new List<CssTag> {
                 new CssTag ("spot"){ CSS = "spot{color:" + Colors.SpotColor.ToHex() + "}" }
             });
@@ -88,7 +86,7 @@ namespace TextStyleDemo.Droid
             toggleButton.Click += (sender, e) =>
             {
                 var styles = _isFirstStyleSheet ? _parsedStylesTwo : _parsedStylesOne;
-                TextStyle.Main.SetStyles(styles);
+                TextStyle.Default.SetStyles(styles);
 
                 _isFirstStyleSheet = !_isFirstStyleSheet;
             };
