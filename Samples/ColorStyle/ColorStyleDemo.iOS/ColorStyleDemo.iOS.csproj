@@ -24,7 +24,7 @@
     <MtouchFastDev>true</MtouchFastDev>
     <MtouchProfiling>true</MtouchProfiling>
     <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>i386</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
@@ -84,6 +84,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.3.8.1\lib\xamarin.ios\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
@@ -135,21 +138,21 @@
     <BundleResource Include="Resources\Style.css" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Styles.Color.iOS\Styles.Color.iOS.csproj">
+    <ProjectReference Include="..\..\..\Src\Color\Styles.Color.iOS\Styles.Color.iOS.csproj">
       <Project>{103D1CF5-C7C2-4B18-B8DA-105100DDF2B3}</Project>
       <Name>Styles.Color.iOS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Styles.Color.Shared\Styles.Color.Shared.csproj">
+    <ProjectReference Include="..\..\..\Src\Color\Styles.Color.Shared\Styles.Color.Shared.csproj">
       <Project>{3CC91C78-C109-4897-9FAC-18BAE06D9254}</Project>
       <Name>Styles.Color.Shared</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\StylesCore\src\Styles.Shared\Styles.Shared.csproj">
-      <Project>{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}</Project>
-      <Name>Styles.Shared</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\StylesCore\src\Styles.iOS\Styles.iOS.csproj">
+    <ProjectReference Include="..\..\..\Src\Shared\Styles.iOS\Styles.iOS.csproj">
       <Project>{4136A2FB-1B10-4597-8459-19E2723756CB}</Project>
       <Name>Styles.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Src\Shared\Styles.Shared\Styles.Shared.csproj">
+      <Project>{F7DE4405-3FCD-497D-B1B1-BC8351C5804B}</Project>
+      <Name>Styles.Shared</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Src\Text\Styles.Text.iOS\Styles.Text.iOS.csproj">
       <Project>{90FC3884-EEC9-42A2-B2D2-260A9A4911D1}</Project>

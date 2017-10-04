@@ -32,3 +32,5 @@ Src/Text/Styles.Text.Shared/obj
 Src/Text/Styles.Text.Droid/bin
 Src/Text/Styles.Text.iOS/bin
 Src/Text/Styles.Text.iOS/obj
+Samples/ColorStyle/ColorStyleDemo.Droid/bin
+Samples/ColorStyle/ColorStyleDemo.Droid/obj

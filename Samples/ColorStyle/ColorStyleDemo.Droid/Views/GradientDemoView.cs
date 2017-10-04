@@ -1,19 +1,10 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.Graphics;
 using Android.Graphics.Drawables;
-using Android.OS;
-using Android.Runtime;
 using Android.Util;
 using Android.Views;
-using Android.Widget;
 using Styles.Color;
+using Styles;
 
 namespace ColorStyleDemo.Droid
 {
@@ -47,17 +38,17 @@ namespace ColorStyleDemo.Droid
         protected override void OnDraw(Android.Graphics.Canvas canvas)
         {
             var linearGradient = new Styles.Color.LinearGradient(
-              new Styles.IRgb[] { ColorSwatches.FlatMint, ColorSwatches.FlatBlue },
+              new IRgb[] { ColorSwatches.FlatMint, ColorSwatches.FlatBlue },
               45
             );
 
             var radialGradient = new Styles.Color.RadialGradient(
-                new Styles.IRgb[] { ColorSwatches.FlatMint, ColorSwatches.FlatBlue },
+                new IRgb[] { ColorSwatches.FlatMint, ColorSwatches.FlatBlue },
                 .5f, .5f
             );
 
-            var ellipticalGradient = new Styles.Color.EllipticalGradient(
-                new Styles.IRgb[] { ColorSwatches.FlatMint, ColorSwatches.FlatBlue, ColorSwatches.DeepPurple },
+            var ellipticalGradient = new EllipticalGradient(
+                new IRgb[] { ColorSwatches.FlatMint, ColorSwatches.FlatBlue, ColorSwatches.DeepPurple },
                 .5f, .5f
             );
             ellipticalGradient.SetScale(1f, 2f);

@@ -23,7 +23,7 @@ namespace ColorStyleDemo.iOS
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
 
-            TextStyle.Main.SetCSS(File.ReadAllText("Style.css"));
+            TextStyle.Default.SetCSS(File.ReadAllText("Style.css"));
 
             return true;
         }

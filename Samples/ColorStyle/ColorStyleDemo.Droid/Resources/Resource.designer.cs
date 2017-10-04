@@ -26,7 +26,8 @@ namespace ColorStyleDemo.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Styles.Color.Droid.Resource.String.library_name = global::ColorStyleDemo.Droid.Resource.String.library_name;
+			global::Styles.Color.Resource.String.library_name = global::ColorStyleDemo.Droid.Resource.String.library_name;
+			global::Styles.Resource.String.library_name = global::ColorStyleDemo.Droid.Resource.String.library_name;
 		}
 		
 		public partial class Animation

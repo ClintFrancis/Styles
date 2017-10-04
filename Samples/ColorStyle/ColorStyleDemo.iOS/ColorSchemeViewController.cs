@@ -5,6 +5,7 @@ using CoreGraphics;
 using Styles;
 using System.Collections.Generic;
 using System.Linq;
+using Styles.Color;
 
 namespace ColorStyleDemo.iOS
 {
