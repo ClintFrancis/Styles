@@ -93,17 +93,18 @@ namespace Styles.Text
 
         void TextEditingChanged(object sender, EventArgs e)
         {
-            _rawText = Text = Target.Text;
+            if (Target.Focused)
+                _rawText = Target.Text;
         }
 
         void TextEditingStarted(object sender, EventArgs e)
         {
-            styleInstance.StyleUITextField(Target, StyleID, _rawText, ignoreHtml: true);
+            Target.Text = _rawText;
         }
 
         void TextEditingEnded(object sender, EventArgs e)
         {
-            styleInstance.StyleUITextField(Target, StyleID, _rawText, CustomTags);
+            Text = Target.Text;
         }
     }
 }

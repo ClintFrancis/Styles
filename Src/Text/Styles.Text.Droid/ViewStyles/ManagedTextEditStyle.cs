@@ -52,7 +52,7 @@ namespace Styles.Text
         {
             if (IsDirty)
             {
-                styleInstance.Style(Target, StyleID, Text, CustomTags, true);
+                styleInstance.Style(Target, StyleID, _rawText, CustomTags, true);
                 _isDirty = false;
             }
             else
@@ -68,19 +68,16 @@ namespace Styles.Text
 
         void TextEditingChanged(object sender, EventArgs e)
         {
-            _rawText = Target.Text;
+            if (Target.IsFocused)
+                _rawText = Target.Text;
         }
 
         void TextFocusChanged(object sender, Android.Views.View.FocusChangeEventArgs e)
         {
             if (Target.IsFocused)
-            {
-                Target.Text = Text;
-            }
+                Target.Text = _rawText;
             else
-            {
-                if (AutoUpdate) styleInstance.Style(Target, StyleID, _rawText, CustomTags);
-            }
+                Text = Target.Text;
         }
     }
 }

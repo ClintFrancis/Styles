@@ -26,7 +26,7 @@ namespace Styles.Text
         {
             if (IsDirty)
             {
-                styleInstance.Style(Target, StyleID, Text, CustomTags, true);
+                styleInstance.Style(Target, StyleID, _rawText, CustomTags, true);
                 _isDirty = false;
             }
             else

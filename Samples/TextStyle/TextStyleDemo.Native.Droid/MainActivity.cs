@@ -62,13 +62,13 @@ namespace TextStyleDemo.Droid
 
             // Create a StyleManager to handle any CSS changes automatically
             _styleManager = new StyleManager(TextStyle.Default);
-            //_styleManager.Add(labelOne, "h2", headingOne);
-            //_styleManager.Add(labelTwo, "h1", headingTwo);
+            _styleManager.Add(labelOne, "h2", headingOne);
+            _styleManager.Add(labelTwo, "h1", headingTwo);
             _styleManager.Add(labelThree, "h2", headingThree, new List<CssTag> {
                 new CssTag ("spot"){ CSS = "spot{color:" + Colors.SpotColor.ToHex() + "}" }
             });
-            //_styleManager.Add(body, "body", textBody);
-            //_styleManager.Add(editText, "body", editbody, enableHtmlEditing: true);
+            _styleManager.Add(body, "body", textBody);
+            _styleManager.Add(editText, "body", editbody, enableHtmlEditing: true);
 
             // Dismiss keyboard on tap of background
             var layout = (LinearLayout)FindViewById(Resource.Id.layout);
@@ -77,7 +77,6 @@ namespace TextStyleDemo.Droid
                 InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
                 imm.HideSoftInputFromWindow(editText.WindowToken, 0);
                 editText.ClearFocus();
-                //editText.SetCursorVisible (false);
             };
 
             // Create a toggle button for swapping between styles

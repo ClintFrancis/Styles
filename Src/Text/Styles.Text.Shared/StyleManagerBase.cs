@@ -82,8 +82,7 @@ namespace Styles.Text
             // Update the displays after so they change all at once
             foreach (var item in _views.Values)
             {
-                item.IsDirty = true;
-                item.UpdateDisplay();
+                item.SetDirty(true);
             }
         }
 

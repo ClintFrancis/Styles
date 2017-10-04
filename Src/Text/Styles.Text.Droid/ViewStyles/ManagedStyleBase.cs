@@ -15,14 +15,6 @@ namespace Styles.Text
         public bool IsDirty
         {
             get { return _isDirty; }
-            set
-            {
-                _isDirty = value;
-                _style = null;
-                _attributedValue = null;
-
-                if (AutoUpdate) UpdateDisplay();
-            }
         }
 
         public bool AutoUpdate
@@ -64,7 +56,7 @@ namespace Styles.Text
             set
             {
                 _styleID = value;
-                IsDirty = true;
+                SetDirty(AutoUpdate);
             }
         }
 
@@ -106,5 +98,14 @@ namespace Styles.Text
         public abstract void UpdateDisplay();
 
         public abstract void UpdateFrame();
+
+        public void SetDirty(bool forceUpdate)
+        {
+            _isDirty = true;
+            _style = null;
+            _attributedValue = null;
+
+            if (forceUpdate) UpdateDisplay();
+        }
     }
 }
