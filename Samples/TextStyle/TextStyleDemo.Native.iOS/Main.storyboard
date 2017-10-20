@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2wG-uh-3ev">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2wG-uh-3ev">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label One" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVG-Ab-Z39">
@@ -23,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="20" id="GF9-JW-k3n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="1" misplaced="YES" text="Label Two" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uk3-Mf-qEG">
@@ -32,7 +36,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="DOJ-2I-mWw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label Three" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaP-Ah-TSW">
@@ -41,12 +45,12 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="h7b-fx-4pn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQF-CO-aWD">
                                 <rect key="frame" x="16" y="277" width="568" height="160"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="18C-I4-dnh"/>
                                 </constraints>
@@ -54,14 +58,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Styled Text Entry" borderStyle="roundedRect" minimumFontSize="17" id="8" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="20" y="445" width="564" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Styled Text Entry" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                                <rect key="frame" x="20" y="445" width="339" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="8" firstAttribute="top" secondItem="EQF-CO-aWD" secondAttribute="bottom" constant="8" id="9"/>
+                            <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" constant="16" id="10"/>
+                            <constraint firstItem="8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="13"/>
                             <constraint firstAttribute="centerX" secondItem="hVG-Ab-Z39" secondAttribute="centerX" id="3tT-j5-DVz"/>
                             <constraint firstItem="vaP-Ah-TSW" firstAttribute="leading" secondItem="hVG-Ab-Z39" secondAttribute="leading" id="EPV-iC-gVl"/>
                             <constraint firstItem="vaP-Ah-TSW" firstAttribute="top" secondItem="uk3-Mf-qEG" secondAttribute="bottom" constant="16" id="HIf-Ws-zi9"/>
@@ -74,18 +81,15 @@
                             <constraint firstItem="vaP-Ah-TSW" firstAttribute="leading" secondItem="uk3-Mf-qEG" secondAttribute="leading" id="V1R-b7-Pzo"/>
                             <constraint firstItem="vaP-Ah-TSW" firstAttribute="trailing" secondItem="uk3-Mf-qEG" secondAttribute="trailing" id="abU-f6-g53"/>
                             <constraint firstItem="EQF-CO-aWD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xsR-Or-c7V"/>
-                            <constraint id="9" firstItem="8" firstAttribute="top" secondItem="EQF-CO-aWD" secondAttribute="bottom" constant="8"/>
-                            <constraint id="10" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="8" secondAttribute="trailing" constant="16"/>
-                            <constraint id="13" firstItem="8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hIo-wB-R4J"/>
                     <connections>
                         <outlet property="body" destination="EQF-CO-aWD" id="Lj7-de-PQo"/>
+                        <outlet property="entry" destination="8" id="name-outlet-8"/>
                         <outlet property="labelOne" destination="hVG-Ab-Z39" id="fFb-ES-xUH"/>
                         <outlet property="labelThree" destination="vaP-Ah-TSW" id="LfZ-o7-7je"/>
                         <outlet property="labelTwo" destination="uk3-Mf-qEG" id="CWH-4Z-QgF"/>
-                        <outlet property="entry" destination="8" id="name-outlet-8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,7 +101,7 @@
             <objects>
                 <navigationController id="2wG-uh-3ev" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v4h-Ls-vRK">
-                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -109,7 +113,4 @@
             <point key="canvasLocation" x="-756" y="249"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="StartupLogo.png" width="229" height="229"/>
-    </resources>
 </document>

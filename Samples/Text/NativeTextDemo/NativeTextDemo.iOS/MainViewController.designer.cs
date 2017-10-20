@@ -32,26 +32,6 @@ namespace NativeTextDemo.iOS
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (titleOne != null) {
-				titleOne.Dispose ();
-				titleOne = null;
-			}
-
-			if (titleTwo != null) {
-				titleTwo.Dispose ();
-				titleTwo = null;
-			}
-
-			if (titleThree != null) {
-				titleThree.Dispose ();
-				titleThree = null;
-			}
-
-			if (textBody != null) {
-				textBody.Dispose ();
-				textBody = null;
-			}
-
 			if (contentView != null) {
 				contentView.Dispose ();
 				contentView = null;
@@ -60,6 +40,26 @@ namespace NativeTextDemo.iOS
 			if (scrollView != null) {
 				scrollView.Dispose ();
 				scrollView = null;
+			}
+
+			if (textBody != null) {
+				textBody.Dispose ();
+				textBody = null;
+			}
+
+			if (titleOne != null) {
+				titleOne.Dispose ();
+				titleOne = null;
+			}
+
+			if (titleThree != null) {
+				titleThree.Dispose ();
+				titleThree = null;
+			}
+
+			if (titleTwo != null) {
+				titleTwo.Dispose ();
+				titleTwo = null;
 			}
 		}
 	}

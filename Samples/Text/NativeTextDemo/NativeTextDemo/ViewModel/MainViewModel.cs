@@ -93,6 +93,24 @@ namespace NativeTextDemo.ViewModel
             }
         }
 
+        private string _entry;
+
+        public string Entry
+        {
+            get
+            {
+                return _entry;
+            }
+            set
+            {
+                if (_entry == value)
+                    return;
+
+                _entry = value;
+                RaisePropertyChanged("Entry");
+            }
+        }
+
         private RelayCommand _refreshCommand;
 
         public RelayCommand RefreshCommand
@@ -117,6 +135,7 @@ namespace NativeTextDemo.ViewModel
             _titleTwo = @"Ordinary & Extraordinary";
             _titleThree = @"Is that little <spot>extra</spot>";
             _body = @"Geometry can produce legible letters but <i>art alone</i> makes them beautiful.<br/><br/>Art begins where geometry ends and imparts to letters a character trascending mere measurement.";
+            _entry = @"hello <i>world</i>";
         }
     }
 }

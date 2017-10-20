@@ -175,8 +175,6 @@ namespace Styles.Text
         // Style a UILable
         public void StyleUILabel(UILabel target, string styleID, string text = null, List<CssTag> customTags = null, bool useExistingStyles = true, bool setFonts = true, bool ignoreHtml = false)
         {
-
-
             var style = GetStyle(styleID);
             if (style == null)
             {

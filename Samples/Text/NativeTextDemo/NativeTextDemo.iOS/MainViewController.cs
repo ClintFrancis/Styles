@@ -83,6 +83,9 @@ namespace NativeTextDemo.iOS
 
         void HandleAction()
         {
+
+
+
             if (Vm != null)
             {
                 Application.Locator.Styles.RefreshCommand.Execute(null);
