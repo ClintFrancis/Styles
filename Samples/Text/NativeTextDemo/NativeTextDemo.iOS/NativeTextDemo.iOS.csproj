@@ -94,6 +94,9 @@
     <Reference Include="GalaSoft.MvvmLight.Platform">
       <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\xamarin.ios10\GalaSoft.MvvmLight.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="IQKeyboardManager">
+      <HintPath>..\packages\Xamarin.IQKeyboardManager.1.4.1\lib\Xamarin.iOS10\IQKeyboardManager.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />

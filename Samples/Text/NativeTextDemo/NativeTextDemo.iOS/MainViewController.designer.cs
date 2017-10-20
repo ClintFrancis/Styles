@@ -22,6 +22,9 @@ namespace NativeTextDemo.iOS
 		UIKit.UITextView textBody { get; set; }
 
 		[Outlet]
+		UIKit.UITextField textEntry { get; set; }
+
+		[Outlet]
 		UIKit.UILabel titleOne { get; set; }
 
 		[Outlet]
@@ -60,6 +63,11 @@ namespace NativeTextDemo.iOS
 			if (titleTwo != null) {
 				titleTwo.Dispose ();
 				titleTwo = null;
+			}
+
+			if (textEntry != null) {
+				textEntry.Dispose ();
+				textEntry = null;
 			}
 		}
 	}

@@ -68,16 +68,25 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="lorum" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tpj-q3-Q3g">
+                                                <rect key="frame" x="20" y="442" width="335" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Hqn-e4-EPc" secondAttribute="trailing" constant="20" id="3L9-AN-2OQ"/>
                                             <constraint firstItem="TVE-hi-LxV" firstAttribute="leading" secondItem="qy5-hi-U1d" secondAttribute="leading" constant="20" id="BQ9-n7-rUh"/>
                                             <constraint firstAttribute="trailing" secondItem="oEM-eP-BpT" secondAttribute="trailing" constant="20" id="I5T-lV-l3q"/>
+                                            <constraint firstItem="tpj-q3-Q3g" firstAttribute="top" secondItem="TVE-hi-LxV" secondAttribute="bottom" constant="19" id="YOW-Kh-LYW"/>
                                             <constraint firstAttribute="trailing" secondItem="Mgy-G1-X39" secondAttribute="trailing" constant="20" id="b9K-1s-bpE"/>
                                             <constraint firstItem="TVE-hi-LxV" firstAttribute="top" secondItem="oEM-eP-BpT" secondAttribute="bottom" constant="40" id="cER-uL-nwt"/>
+                                            <constraint firstAttribute="trailing" secondItem="tpj-q3-Q3g" secondAttribute="trailing" constant="20" id="diw-Ja-m02"/>
                                             <constraint firstItem="Mgy-G1-X39" firstAttribute="top" secondItem="Hqn-e4-EPc" secondAttribute="bottom" constant="40" id="ji7-Ej-veE"/>
                                             <constraint firstItem="Hqn-e4-EPc" firstAttribute="leading" secondItem="qy5-hi-U1d" secondAttribute="leading" constant="20" id="mwL-0e-zgA"/>
+                                            <constraint firstItem="tpj-q3-Q3g" firstAttribute="leading" secondItem="qy5-hi-U1d" secondAttribute="leading" constant="20" id="oNR-Py-4m0"/>
                                             <constraint firstAttribute="trailing" secondItem="TVE-hi-LxV" secondAttribute="trailing" constant="20" id="q15-3s-DTS"/>
                                             <constraint firstItem="oEM-eP-BpT" firstAttribute="leading" secondItem="qy5-hi-U1d" secondAttribute="leading" constant="20" id="qTk-Ne-CR6"/>
                                             <constraint firstItem="oEM-eP-BpT" firstAttribute="top" secondItem="Mgy-G1-X39" secondAttribute="bottom" constant="40" id="s7S-Eb-OEZ"/>
@@ -109,6 +118,7 @@
                         <outlet property="contentView" destination="qy5-hi-U1d" id="OJA-kM-Hav"/>
                         <outlet property="scrollView" destination="HMn-pN-rUI" id="y4W-xH-6UO"/>
                         <outlet property="textBody" destination="TVE-hi-LxV" id="o5r-Wq-iyB"/>
+                        <outlet property="textEntry" destination="tpj-q3-Q3g" id="iOL-QO-VbY"/>
                         <outlet property="titleOne" destination="Hqn-e4-EPc" id="XVm-V4-Vec"/>
                         <outlet property="titleThree" destination="oEM-eP-BpT" id="eOv-xC-nBc"/>
                         <outlet property="titleTwo" destination="Mgy-G1-X39" id="bzL-fE-Qia"/>

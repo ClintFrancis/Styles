@@ -16,6 +16,8 @@ namespace NativeTextDemo.iOS
         IManagedStyle styleTwo;
         IManagedStyle styleThree;
         IManagedStyle styleBody;
+        IManagedStyle styleEntry;
+
 
         // Keep track of bindings to avoid premature garbage collection
         readonly List<Binding> bindings = new List<Binding>();
@@ -41,6 +43,8 @@ namespace NativeTextDemo.iOS
             styleThree = styleManager.Add(titleThree, TextStyles.H2);
             styleThree.AutoUpdate = true;
             styleBody = styleManager.Add(textBody, TextStyles.Body);
+            styleEntry = styleManager.Add(textEntry, TextStyles.Body);
+            styleEntry.EnableHtmlEditing = true;
 
             bindings.Add(
                 this.SetBinding(
@@ -77,18 +81,30 @@ namespace NativeTextDemo.iOS
                 )
             );
 
+            bindings.Add(
+                this.SetBinding(
+                    () => Vm.Entry,
+                    () => styleEntry.Text
+                )
+            );
+
+            Xamarin.IQKeyboardManager.SharedManager.EnableAutoToolbar = true;
+            Xamarin.IQKeyboardManager.SharedManager.ShouldResignOnTouchOutside = true;
+
             var touchGesture = new UITapGestureRecognizer(HandleAction);
             View.AddGestureRecognizer(touchGesture);
         }
 
         void HandleAction()
         {
-
-
-
-            if (Vm != null)
+            if (textEntry.IsEditing)
             {
-                Application.Locator.Styles.RefreshCommand.Execute(null);
+                View.EndEditing(true);
+
+                if (Vm != null)
+                {
+                    Application.Locator.Styles.RefreshCommand.Execute(null);
+                }
             }
         }
     }
