@@ -26,6 +26,8 @@ namespace NativeTextDemo.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Styles.Resource.String.library_name = global::NativeTextDemo.Droid.Resource.String.library_name;
+			global::Styles.Text.Droid.Resource.String.library_name = global::NativeTextDemo.Droid.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -44,8 +46,32 @@ namespace NativeTextDemo.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			// aapt resource value: 0x7f070005
+			public const int body = 2131165189;
+			
+			// aapt resource value: 0x7f070006
+			public const int editText = 2131165190;
+			
+			// aapt resource value: 0x7f070002
+			public const int labelOne = 2131165186;
+			
+			// aapt resource value: 0x7f070004
+			public const int labelThree = 2131165188;
+			
+			// aapt resource value: 0x7f070003
+			public const int labelTwo = 2131165187;
+			
+			// aapt resource value: 0x7f070000
+			public const int layout = 2131165184;
+			
+			// aapt resource value: 0x7f070008
+			public const int menu_refresh = 2131165192;
+			
+			// aapt resource value: 0x7f070007
+			public const int space1 = 2131165191;
+			
+			// aapt resource value: 0x7f070001
+			public const int toolbar = 2131165185;
 			
 			static Id()
 			{
@@ -63,6 +89,9 @@ namespace NativeTextDemo.Droid
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
 			
+			// aapt resource value: 0x7f030001
+			public const int toolbar = 2130903041;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -73,11 +102,30 @@ namespace NativeTextDemo.Droid
 			}
 		}
 		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int home = 2131099648;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
+			{
+			}
+		}
+		
 		public partial class Mipmap
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int ic_cached_white_24dp = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int Icon = 2130837505;
 			
 			static Mipmap()
 			{
@@ -92,11 +140,14 @@ namespace NativeTextDemo.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f040002
+			public const int app_name = 2130968578;
+			
 			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			public const int hello = 2130968577;
 			
 			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			public const int library_name = 2130968576;
 			
 			static String()
 			{
@@ -104,6 +155,22 @@ namespace NativeTextDemo.Droid
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int MyTheme = 2131034112;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

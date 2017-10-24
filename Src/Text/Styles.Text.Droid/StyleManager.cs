@@ -5,6 +5,11 @@ namespace Styles.Text
 {
     public class StyleManager : StyleManagerBase
     {
+        public StyleManager()
+        {
+            Init(TextStyle.Default);
+        }
+
         public StyleManager(ITextStyle instance)
         {
             Init(instance);

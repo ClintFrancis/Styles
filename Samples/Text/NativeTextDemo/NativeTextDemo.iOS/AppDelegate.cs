@@ -22,7 +22,7 @@ namespace NativeTextDemo.iOS
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             // Register a new text style
-            SimpleIoc.Default.Register<ITextStyle>(() => new TextStyle());
+            SimpleIoc.Default.Register<ITextStyle>(() => TextStyle.Default);
 
             AppBootstrapper.Init();
 
