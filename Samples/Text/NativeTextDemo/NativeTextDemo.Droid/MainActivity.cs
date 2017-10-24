@@ -13,12 +13,6 @@ namespace NativeTextDemo.Droid
     [Activity(Theme = "@style/MyTheme", Label = "NativeTextDemo", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
-        TextView titleOne;
-        TextView titleTwo;
-        TextView titleThree;
-        TextView textBody;
-        EditText textEntry;
-
         StyleManager styleManager;
         IManagedStyle styleOne;
         IManagedStyle styleTwo;
@@ -62,21 +56,14 @@ namespace NativeTextDemo.Droid
             toolbar.Title = "Native Text Demo";
             SetActionBar(toolbar);
 
-            // Get our ui elements from the layout resource
-            titleOne = FindViewById<TextView>(Resource.Id.labelOne);
-            titleTwo = FindViewById<TextView>(Resource.Id.labelTwo);
-            titleThree = FindViewById<TextView>(Resource.Id.labelThree);
-            textBody = FindViewById<TextView>(Resource.Id.body);
-            textEntry = FindViewById<EditText>(Resource.Id.editText);
-
             // Set up the Style Manager
             styleManager = new StyleManager();
-            styleOne = styleManager.Add(titleOne, TextStyles.H2);
-            styleTwo = styleManager.Add(titleTwo, TextStyles.H1);
-            styleThree = styleManager.Add(titleThree, TextStyles.H2);
+            styleOne = styleManager.Add(FindViewById<TextView>(Resource.Id.titleOne), TextStyles.H2);
+            styleTwo = styleManager.Add(FindViewById<TextView>(Resource.Id.titleTwo), TextStyles.H1);
+            styleThree = styleManager.Add(FindViewById<TextView>(Resource.Id.titleThree), TextStyles.H2);
             styleThree.AutoUpdate = true;
-            styleBody = styleManager.Add(textBody, TextStyles.Body);
-            styleEntry = styleManager.Add(textEntry, TextStyles.Body);
+            styleBody = styleManager.Add(FindViewById<TextView>(Resource.Id.textBody), TextStyles.Body);
+            styleEntry = styleManager.Add(FindViewById<EditText>(Resource.Id.textEdit), TextStyles.Body);
             styleEntry.EnableHtmlEditing = true;
 
             bindings.Add(
@@ -135,7 +122,9 @@ namespace NativeTextDemo.Droid
         }
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            Toast.MakeText(this, "Top ActionBar pressed: " + item.TitleFormatted, ToastLength.Short).Show();
+            ViewModelLocator.Styles.RefreshCommand.Execute(null);
+
+            //Toast.MakeText(this, "Top ActionBar pressed: " + item.TitleFormatted, ToastLength.Short).Show();
             return base.OnOptionsItemSelected(item);
         }
     }

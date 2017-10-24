@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
     <TextView
-        android:id="@+id/labelOne"
+        android:id="@+id/titleOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="30sp"
@@ -19,7 +19,7 @@
         android:layout_marginRight="20sp"
         android:text="Label One" />
     <TextView
-        android:id="@+id/labelTwo"
+        android:id="@+id/titleTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="15sp"
@@ -27,7 +27,7 @@
         android:layout_marginRight="20sp"
         android:text="Label Two" />
     <TextView
-        android:id="@+id/labelThree"
+        android:id="@+id/titleThree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="30sp"
@@ -39,7 +39,7 @@
         android:layout_height="0.5dp"
         android:background="@android:color/darker_gray" />
     <TextView
-        android:id="@+id/body"
+        android:id="@+id/textBody"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10sp"
@@ -52,7 +52,7 @@
         android:paddingTop="20sp"
         android:layout_marginLeft="20sp"
         android:layout_marginRight="20sp"
-        android:id="@+id/editText"
+        android:id="@+id/textEdit"
         android:imeOptions="actionDone"
         android:singleLine="true"
         android:editable="true" />

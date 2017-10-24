@@ -146,11 +146,14 @@ namespace Styles.Text
 
         public ISpanned CreateStyledString(TextStyleParameters style, string text, int startIndex = 0, int endIndex = -1)
         {
+            if (text.Length == 0)
+                return null;
+
             if (endIndex == -1)
                 endIndex = text.Length;
 
             if (startIndex >= endIndex)
-                throw new Exception("Unable to create styled string, StartIndex is too high:" + startIndex);
+                throw new Exception("Unable to create styled string, StartIndex is too high: " + startIndex);
 
             // Parse the text
             text = ParseString(style, text);

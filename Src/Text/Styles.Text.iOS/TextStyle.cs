@@ -97,6 +97,9 @@ namespace Styles.Text
         /// <param name="endIndex">Style end index</param>
         public NSMutableAttributedString CreateStyledString(TextStyleParameters style, string text, int startIndex = 0, int endIndex = -1)
         {
+            if (text.Length == 0)
+                return null;
+
             var attribs = GetStringAttributes(style, DefaultTextSize);
             text = ParseString(style, text);
 
