@@ -16,6 +16,9 @@ namespace NativeTextDemo.iOS
 		UIKit.UIView contentView { get; set; }
 
 		[Outlet]
+		UIKit.UIBarButtonItem refreshButton { get; set; }
+
+		[Outlet]
 		UIKit.UIScrollView scrollView { get; set; }
 
 		[Outlet]
@@ -50,6 +53,11 @@ namespace NativeTextDemo.iOS
 				textBody = null;
 			}
 
+			if (textEntry != null) {
+				textEntry.Dispose ();
+				textEntry = null;
+			}
+
 			if (titleOne != null) {
 				titleOne.Dispose ();
 				titleOne = null;
@@ -65,9 +73,9 @@ namespace NativeTextDemo.iOS
 				titleTwo = null;
 			}
 
-			if (textEntry != null) {
-				textEntry.Dispose ();
-				textEntry = null;
+			if (refreshButton != null) {
+				refreshButton.Dispose ();
+				refreshButton = null;
 			}
 		}
 	}

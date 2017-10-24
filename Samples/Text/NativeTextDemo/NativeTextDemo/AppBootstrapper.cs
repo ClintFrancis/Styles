@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
+using NativeTextDemo.ViewModel;
 using Styles.Text;
 
 namespace NativeTextDemo
@@ -10,10 +11,8 @@ namespace NativeTextDemo
             // Set the assembly reference for the Asset Loader
             Assets.AssemblyType = typeof(AppBootstrapper);
 
-            // Ensure that the Styles.Text library has been initialised
-            var textStyle = SimpleIoc.Default.GetInstance<ITextStyle>();
-            var css = Assets.LoadString("NativeTextDemo.Resources.StyleOne.css");
-            textStyle.SetCSS(css);
+            // Initalise the ViewModelLocator
+            ViewModelLocator.Init();
         }
     }
 }

@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -113,9 +113,12 @@
                             <constraint firstAttribute="trailing" secondItem="HMn-pN-rUI" secondAttribute="trailing" id="jPU-CX-ToZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Vee-Jd-63O"/>
+                    <navigationItem key="navigationItem" id="Vee-Jd-63O">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="jiZ-PS-k6A"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentView" destination="qy5-hi-U1d" id="OJA-kM-Hav"/>
+                        <outlet property="refreshButton" destination="jiZ-PS-k6A" id="o4N-Om-bwM"/>
                         <outlet property="scrollView" destination="HMn-pN-rUI" id="y4W-xH-6UO"/>
                         <outlet property="textBody" destination="TVE-hi-LxV" id="o5r-Wq-iyB"/>
                         <outlet property="textEntry" destination="tpj-q3-Q3g" id="iOL-QO-VbY"/>

@@ -61,9 +61,9 @@ namespace NativeTextDemo
         public void Init()
         {
             textStyle = SimpleIoc.Default.GetInstance<ITextStyle>();
-            //CSS1 = Assets.LoadString("NativeTextDemo.Resources.StyleTwo.css");
-            //CSS2 = Assets.LoadString("NativeTextDemo.Resources.StyleOne.css");
-            //textStyle.SetCSS(CSS1);
+            CSS1 = Assets.LoadString("NativeTextDemo.Resources.StyleTwo.css");
+            CSS2 = Assets.LoadString("NativeTextDemo.Resources.StyleOne.css");
+            textStyle.SetCSS(CSS1);
 
             CustomTags = new List<CssTag> {
                 new CssTag ("spot"){ CSS = "spot{color:" + ColorSwatches.SpotColor.ToHex () + "}" }

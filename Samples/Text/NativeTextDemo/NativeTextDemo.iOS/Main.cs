@@ -5,14 +5,14 @@ namespace NativeTextDemo.iOS
 {
     public class Application
     {
-        private static ViewModelLocator locator;
-        public static ViewModelLocator Locator
-        {
-            get
-            {
-                return locator ?? (locator = new ViewModelLocator());
-            }
-        }
+        //private static ViewModelLocator locator;
+        //public static ViewModelLocator Locator
+        //{
+        //    get
+        //    {
+        //        return locator ?? (locator = new ViewModelLocator());
+        //    }
+        //}
 
         // This is the main entry point of the application.
         static void Main(string[] args)

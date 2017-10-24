@@ -22,12 +22,9 @@ namespace NativeTextDemo.ViewModel
     /// This class contains static references to all the view models in the
     /// application and provides an entry point for the bindings.
     /// </summary>
-    public class ViewModelLocator
+    public static class ViewModelLocator
     {
-        /// <summary>
-        /// Initializes a new instance of the ViewModelLocator class.
-        /// </summary>
-        public ViewModelLocator()
+        public static void Init()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
@@ -35,7 +32,7 @@ namespace NativeTextDemo.ViewModel
             SimpleIoc.Default.Register<StylesViewModel>(true);
         }
 
-        public MainViewModel Main
+        public static MainViewModel Main
         {
             get
             {
@@ -43,7 +40,7 @@ namespace NativeTextDemo.ViewModel
             }
         }
 
-        public StylesViewModel Styles
+        public static StylesViewModel Styles
         {
             get
             {

@@ -25,7 +25,7 @@ namespace NativeTextDemo.iOS
         {
             get
             {
-                return Application.Locator.Main;
+                return ViewModelLocator.Main;
             }
         }
 
@@ -36,6 +36,8 @@ namespace NativeTextDemo.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            refreshButton.Clicked += RefreshButton_Clicked;
 
             styleManager = new StyleManager();
             styleOne = styleManager.Add(titleOne, TextStyles.H2);
@@ -48,7 +50,7 @@ namespace NativeTextDemo.iOS
 
             bindings.Add(
                 this.SetBinding(
-                    () => Application.Locator.Styles.CustomTags,
+                    () => ViewModelLocator.Styles.CustomTags,
                     () => styleManager.CustomTags
                 )
             );
@@ -95,17 +97,18 @@ namespace NativeTextDemo.iOS
             View.AddGestureRecognizer(touchGesture);
         }
 
+        void RefreshButton_Clicked(object sender, EventArgs e)
+        {
+            if (Vm != null)
+            {
+                ViewModelLocator.Styles.RefreshCommand.Execute(null);
+            }
+        }
+
         void HandleAction()
         {
             if (textEntry.IsEditing)
-            {
                 View.EndEditing(true);
-
-                if (Vm != null)
-                {
-                    Application.Locator.Styles.RefreshCommand.Execute(null);
-                }
-            }
         }
     }
 }
