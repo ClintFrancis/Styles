@@ -13,9 +13,10 @@ namespace NativeTextDemo
         public string CSS1 { get; private set; }
         public string CSS2 { get; private set; }
         ITextStyle textStyle;
+        bool isCss1 = true;
 
 
-        private List<CssTag> _customTags;
+        List<CssTag> _customTags;
 
         public List<CssTag> CustomTags
         {
@@ -34,7 +35,7 @@ namespace NativeTextDemo
             }
         }
 
-        private RelayCommand _refreshCommand;
+        RelayCommand _refreshCommand;
 
         public RelayCommand RefreshCommand
         {
@@ -44,10 +45,16 @@ namespace NativeTextDemo
                   ?? (_refreshCommand = new RelayCommand(
                     () =>
                     {
-                        var randomColor = ColorSwatches.RandomColor.ToHex();
-                        CustomTags = new List<CssTag> {
-                            new CssTag ("spot"){ CSS = "spot{color:" + randomColor + "}" }
-                        };
+                        if (isCss1)
+                        {
+                            textStyle.SetCSS(CSS2);
+                            isCss1 = false;
+                        }
+                        else
+                        {
+                            textStyle.SetCSS(CSS1);
+                            isCss1 = true;
+                        }
                     }));
             }
         }

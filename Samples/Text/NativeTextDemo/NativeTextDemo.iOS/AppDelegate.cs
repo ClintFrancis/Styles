@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using GalaSoft.MvvmLight.Ioc;
+using Styles;
 using Styles.Text;
 using UIKit;
 
@@ -20,9 +21,12 @@ namespace NativeTextDemo.iOS
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            // TEMP while not using a nuget
+            // Register a new text style
             SimpleIoc.Default.Register<ITextStyle>(() => new TextStyle());
+
             AppBootstrapper.Init();
+
+            UIBarButtonItem.Appearance.TintColor = ColorSwatches.SpotColor.ToNative();
 
             return true;
         }
