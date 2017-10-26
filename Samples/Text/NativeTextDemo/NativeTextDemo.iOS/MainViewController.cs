@@ -43,10 +43,8 @@ namespace NativeTextDemo.iOS
             styleOne = styleManager.Add(titleOne, TextStyles.H2);
             styleTwo = styleManager.Add(titleTwo, TextStyles.H1);
             styleThree = styleManager.Add(titleThree, TextStyles.H2);
-            styleThree.AutoUpdate = true;
             styleBody = styleManager.Add(textBody, TextStyles.Body);
-            styleEntry = styleManager.Add(textEntry, TextStyles.Body);
-            styleEntry.EnableHtmlEditing = true;
+            styleEntry = styleManager.Add(textEntry, TextStyles.Body, enableHtmlEditing: true);
 
             bindings.Add(
                 this.SetBinding(

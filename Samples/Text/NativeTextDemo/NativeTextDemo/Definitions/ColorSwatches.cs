@@ -5,7 +5,7 @@ namespace NativeTextDemo
 {
     public static class ColorSwatches
     {
-        public static ColorRGB SpotColor = new ColorRGB(255, 0, 0);
+        public static ColorRGB SpotColor = ColorRGB.FromHex("#ff6f00");
 
         public static ColorRGB RandomColor
         {

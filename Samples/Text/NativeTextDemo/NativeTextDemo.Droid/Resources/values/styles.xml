@@ -6,12 +6,12 @@
 		<item name="android:windowActionBar">false</item>
 		<!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
 		<!-- colorPrimary is used for the default action bar background -->
-		<item name="android:colorPrimary">#2196F3</item>
+		<item name="android:colorPrimary">#ff6f00</item>
 		<!-- colorPrimaryDark is used for the status bar -->
-		<item name="android:colorPrimaryDark">#1976D2</item>
+		<item name="android:colorPrimaryDark">#c43e00</item>
 		<!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
-		<item name="android:colorAccent">#FF4081</item>
+		<item name="android:colorAccent">#ffa040</item>
 		<!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
 	</style>

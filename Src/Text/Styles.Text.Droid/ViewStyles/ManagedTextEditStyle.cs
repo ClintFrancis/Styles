@@ -42,12 +42,6 @@ namespace Styles.Text
             Text = !string.IsNullOrEmpty(text) ? text : Target.Text;
         }
 
-        public override void Dispose()
-        {
-            EnableHtmlEditing = false;
-            Target = null;
-        }
-
         public override void UpdateDisplay()
         {
             if (IsDirty)
@@ -78,6 +72,12 @@ namespace Styles.Text
                 Target.Text = _rawText;
             else
                 Text = Target.Text;
+        }
+
+        public override void Dispose()
+        {
+            EnableHtmlEditing = false;
+            Target = null;
         }
     }
 }
