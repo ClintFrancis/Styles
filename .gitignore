@@ -38,3 +38,5 @@ Src/Text/Styles.Text.Core/bin
 Src/Text/Styles.Text.Core/obj
 Samples/Text/NativeTextDemo/NativeTextDemo.Droid/bin
 Samples/Text/NativeTextDemo/NativeTextDemo.Droid/obj
+Samples/Text/NativeTextDemo/AltNativeText.Droid/bin
+Samples/Text/NativeTextDemo/AltNativeText.Droid/obj

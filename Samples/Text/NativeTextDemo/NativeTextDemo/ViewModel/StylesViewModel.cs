@@ -12,8 +12,12 @@ namespace NativeTextDemo
     {
         public string CSS1 { get; private set; }
         public string CSS2 { get; private set; }
+
+        Dictionary<string, TextStyleParameters> _parsedStylesOne;
+        Dictionary<string, TextStyleParameters> _parsedStylesTwo;
+
         ITextStyle textStyle;
-        bool isCss1 = true;
+        bool isCss1;
 
 
         List<CssTag> _customTags;
@@ -47,12 +51,12 @@ namespace NativeTextDemo
                     {
                         if (isCss1)
                         {
-                            textStyle.SetCSS(CSS2);
+                            textStyle.SetStyles(_parsedStylesTwo);
                             isCss1 = false;
                         }
                         else
                         {
-                            textStyle.SetCSS(CSS1);
+                            textStyle.SetStyles(_parsedStylesOne);
                             isCss1 = true;
                         }
                     }));
@@ -68,10 +72,16 @@ namespace NativeTextDemo
         public void Init()
         {
             textStyle = SimpleIoc.Default.GetInstance<ITextStyle>();
-            CSS1 = Assets.LoadString("NativeTextDemo.Resources.StyleTwo.css");
-            CSS2 = Assets.LoadString("NativeTextDemo.Resources.StyleOne.css");
-            textStyle.SetCSS(CSS2);
-            isCss1 = false;
+
+            CSS1 = Assets.LoadString("NativeTextDemo.Resources.StyleOne.css");
+            CSS2 = Assets.LoadString("NativeTextDemo.Resources.StyleTwo.css");
+
+            // Pre-parse the style sheets
+            _parsedStylesOne = CssTextStyleParser.Parse(CSS1);
+            _parsedStylesTwo = CssTextStyleParser.Parse(CSS2);
+
+            textStyle.SetStyles(_parsedStylesOne);
+            isCss1 = true;
 
             CustomTags = new List<CssTag> {
                 new CssTag ("spot"){ CSS = "spot{color:" + ColorSwatches.SpotColor.ToHex () + "}" }

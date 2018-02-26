@@ -10,7 +10,7 @@ namespace Styles.Text
     {
         public static Dictionary<string, ITextStyle> Instances { get { return null; } }
 
-        public static TextStyle Main
+        public static TextStyle Default
         {
             get
             {

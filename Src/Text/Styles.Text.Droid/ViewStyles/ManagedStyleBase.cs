@@ -34,7 +34,11 @@ namespace Styles.Text
                 _text = TextStyle.ParseString(Style, _rawText);
                 _attributedValue = null;
 
-                if (AutoUpdate) UpdateDisplay();
+                if (AutoUpdate)
+                {
+                    _isDirty = ContainsHtml;
+                    UpdateDisplay();
+                }
             }
         }
 
@@ -71,6 +75,9 @@ namespace Styles.Text
             {
                 _customTags = new List<CssTag>(value);
                 _attributedValue = null;
+
+                // TEMp
+                Console.WriteLine("DEBUG Custom Tags:{0}", _rawText);
 
                 if (AutoUpdate) UpdateDisplay();
             }

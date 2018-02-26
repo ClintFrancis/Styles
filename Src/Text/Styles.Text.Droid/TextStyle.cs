@@ -201,7 +201,6 @@ namespace Styles.Text
                 StyleTextView(textView, style, true);
                 var html = CreateHtmlString(text, styleID, customTags, useExistingStyles);
                 textView.SetText(html, TextView.BufferType.Spannable);
-
             }
             else if (style.RequiresHtmlTags())
             {

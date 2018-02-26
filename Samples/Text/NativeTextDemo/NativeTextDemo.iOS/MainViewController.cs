@@ -39,54 +39,24 @@ namespace NativeTextDemo.iOS
 
             refreshButton.Clicked += RefreshButton_Clicked;
 
+            // Set the binding BEFORE adding items so as to avoid restyling everything
             styleManager = new StyleManager();
+            bindings.Add(this.SetBinding(() => ViewModelLocator.Styles.CustomTags, () => styleManager.CustomTags));
+
             styleOne = styleManager.Add(titleOne, TextStyles.H2);
+            bindings.Add(this.SetBinding(() => Vm.TitleOne, () => styleOne.Text));
+
             styleTwo = styleManager.Add(titleTwo, TextStyles.H1);
+            bindings.Add(this.SetBinding(() => Vm.TitleTwo, () => styleTwo.Text));
+
             styleThree = styleManager.Add(titleThree, TextStyles.H2);
+            bindings.Add(this.SetBinding(() => Vm.TitleThree, () => styleThree.Text));
+
             styleBody = styleManager.Add(textBody, TextStyles.Body);
+            bindings.Add(this.SetBinding(() => Vm.Body, () => styleBody.Text));
+
             styleEntry = styleManager.Add(textEntry, TextStyles.Body, enableHtmlEditing: true);
-
-            bindings.Add(
-                this.SetBinding(
-                    () => ViewModelLocator.Styles.CustomTags,
-                    () => styleManager.CustomTags
-                )
-            );
-
-            bindings.Add(
-                this.SetBinding(
-                    () => Vm.TitleOne,
-                    () => styleOne.Text
-                )
-            );
-
-            bindings.Add(
-                this.SetBinding(
-                    () => Vm.TitleTwo,
-                    () => styleTwo.Text
-                )
-            );
-
-            bindings.Add(
-                this.SetBinding(
-                    () => Vm.TitleThree,
-                    () => styleThree.Text
-                )
-            );
-
-            bindings.Add(
-                this.SetBinding(
-                    () => Vm.Body,
-                    () => styleBody.Text
-                )
-            );
-
-            bindings.Add(
-                this.SetBinding(
-                    () => Vm.Entry,
-                    () => styleEntry.Text
-                )
-            );
+            bindings.Add(this.SetBinding(() => Vm.Entry, () => styleEntry.Text));
 
             Xamarin.IQKeyboardManager.SharedManager.EnableAutoToolbar = true;
             Xamarin.IQKeyboardManager.SharedManager.ShouldResignOnTouchOutside = true;
