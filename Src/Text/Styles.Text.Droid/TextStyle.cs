@@ -8,6 +8,8 @@ using Android.Graphics;
 using Android.App;
 using Android.Util;
 using Android.Views;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace Styles.Text
 {
@@ -20,16 +22,7 @@ namespace Styles.Text
 
         internal static Type typeTextView = typeof(TextView);
         internal static Type typeEditText = typeof(EditText);
-
         internal Dictionary<string, Typeface> _typeFaces;
-
-        //public static TextStyle CreateInstance (string id)
-        //{
-        //	lock (padlock) {
-        //		_instances [id] = new TextStyle (id);
-        //		return _instances [id] as TextStyle;
-        //	}
-        //}
 
         public static TextStyle Default
         {
@@ -88,18 +81,35 @@ namespace Styles.Text
             return font;
         }
 
-
         public ISpanned CreateHtmlString(string text, string defaultStyle, List<CssTag> customTags = null, bool mergeExistingStyles = true, bool includeExistingStyles = true)
         {
-            var styles = customTags != null ? MergeStyles(defaultStyle, customTags, mergeExistingStyles, includeExistingStyles) : _textStyles;
+            var styles = customTags != null ? MergeStyles(defaultStyle, customTags, mergeExistingStyles) : _textStyles;
             if (!styles.ContainsKey(defaultStyle))
                 styles.Add(defaultStyle, _textStyles[defaultStyle]);
+
+            if (includeExistingStyles)
+            {
+                // Create a unique list of tags used within the text
+                var tagList = new List<string>();
+                string pattern = @"(?<=</?)([^ >/]+)";
+                var matches = Regex.Matches(text, pattern);
+
+                for (int i = 0; i < matches.Count; i++)
+                    tagList.Add(matches[i].ToString());
+
+                tagList = tagList.Distinct().ToList();
+
+                // If the tag isnt already included, add it into the styles
+                foreach (var tag in tagList)
+                    if (_textStyles.ContainsKey(tag) && !styles.ContainsKey(tag))
+                        styles.Add(tag, _textStyles[tag]);
+            }
 
             var converter = new CustomHtmlParser(this, text, styles, defaultStyle);
             return converter.Convert();
         }
 
-        Dictionary<string, TextStyleParameters> MergeStyles(string defaultStyleID, List<CssTag> customTags, bool mergeExistingStyles = true, bool includeExistingStyles = true)
+        Dictionary<string, TextStyleParameters> MergeStyles(string defaultStyleID, List<CssTag> customTags, bool mergeExistingStyles = true)
         {
             var customCSS = new StringBuilder();
             foreach (var customTag in customTags)
